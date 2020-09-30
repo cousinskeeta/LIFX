@@ -95,7 +95,7 @@ class LIFX(object):
                                 data=payload, headers=headers)
         print(response.json())
         
-    def preset(self, brightness):
+    def preset(self):
         token = self.token
         presets= {"mexicana": self.mexicana,
                   "mango": self.mango,

@@ -107,26 +107,26 @@ class LIFX(object):
                   "vday_vibes": self.vday_vibes,
                   "habesha_nation": self.habesha_nation
         }
-        s = input("""
-        Pick preset theme:\n 'mexicana'\n 'mango'\n
-        'pisces'\n 'focus'\n 'hygge'\n 'blue_haus'\n
-        'lady_prep'\n 'vday_vibes'\n 'habesha_nation' 
-        """)
+        # s = input("""
+        # Pick preset theme:\n 'mexicana'\n 'mango'\n
+        # 'pisces'\n 'focus'\n 'hygge'\n 'blue_haus'\n
+        # 'lady_prep'\n 'vday_vibes'\n 'habesha_nation' 
+        # """)
         
-        b = input("Enter level of brightness 0 to 1 ")
-        scene = presets[s]
-        brightness = b
+        # b = input("Enter level of brightness 0 to 1 ")
+        # scene = presets[s]
+        # brightness = b
 
         headers = {
             "Authorization": "Bearer %s" % token,
         }
 
-        payload = {
-            "brightness": brightness,
-        }
+        # payload = {
+        #     "brightness": brightness,
+        # }
 
         response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
-        response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
+        # response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
 
         print(response.json())
 
@@ -144,5 +144,92 @@ class LIFX(object):
         response = requests.put('https://api.lifx.com/v1/lights/all/state', data=payload, headers=headers)
         print(response.json())
 
+    def mex(self):
+        token = self.token
+        mx= self.mexicana
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
 
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % mx, headers=headers)
+        print(response.json())
 
+    def mang(self):
+        token = self.token
+        scene= self.mango
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
+
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
+        print(response.json())
+
+    def pisc(self):
+        token = self.token
+        scene= self.pisces
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
+
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
+        print(response.json())
+
+    def pis(self):
+        token = self.token
+        scene= self.pisces
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
+
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
+        print(response.json())
+
+    def hyg(self):
+        token = self.token
+        scene= self.hygge
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
+
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
+        print(response.json())
+
+    def blu(self):
+        token = self.token
+        scene= self.blue_haus
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
+
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
+        print(response.json())
+
+    def lad(self):
+        token = self.token
+        scene= self.lady_prep
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
+
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
+        print(response.json())
+
+    def vda(self):
+        token = self.token
+        scene= self.vday_vibes
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
+
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
+        print(response.json())
+
+    def hab(self):
+        token = self.token
+        scene= self.habesha_nation
+        headers = {
+            "Authorization": "Bearer %s" % token,
+        }
+
+        response = requests.put('https://api.lifx.com/v1/scenes/scene_id:%s/activate' % scene, headers=headers)
+        print(response.json())

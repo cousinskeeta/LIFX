@@ -1,8 +1,47 @@
 <html>
     <head>
         <title>{{ title }}</title>
+
+        <style>
+            .btn-group button {
+            background-color: hsl(187, 52%, 80%); /* Green background */
+            border: 1px solid powderblue; /* Green border */
+            color: white; /* White text */
+            padding: 10px 24px; /* Some padding */
+            cursor: pointer; /* Pointer/hand icon */
+            width: 55%; /* Set a width if needed */
+            display: block; /* Make the buttons appear below each other */
+            }
+
+            .btn-group button:not(:last-child) {
+            border-bottom: none; /* Prevent double borders */
+            }
+
+            /* Add a background color on hover */
+            .btn-group button:hover {
+            background-color: rgb(44, 130, 141);
+
+        </style>
     </head>
+
     <body>
-        <h1>Enter Your LIFX API Key:</h1>
+        <div class="btn-group" style="width:100%">
+            <form action="#" method="POST">
+                <button style="width:33.3%" type="submit">LIFX App</button>
+                <label for="lifx_id">Please enter your LIFX key below. <i><a href="#">HELP</a></i></label><br>
+                <input type="text" id="lifx_id" name="lifx_id" style="width:33.3%">
+                <button style="width:33.3%" type="submit" formaction="#">Power ON</button>
+                <button style="width:33.3%" type="submit" formaction="#">Power OFF</button>
+                <button style="width:33.3%" type="submit" formaction="#">PULSE</button>
+                <button style="width:33.3%" type="submit" formaction="#">Mexicana</button>
+                <button style="width:33.3%" type="submit" formaction="#">Mango</button>
+                <button style="width:33.3%" type="submit" formaction="#">Pisces</button>
+                <button style="width:33.3%" type="submit" formaction="#">Hygge</button>
+                <button style="width:33.3%" type="submit" formaction="#">Blue Haus</button>
+                <button style="width:33.3%" type="submit" formaction="#">Lady Prep</button>
+                <button style="width:33.3%" type="submit" formaction="#">Vday Vibes</button>
+                <button style="width:33.3%" type="submit" formaction="#">Habesha Nation</button>
+            </form>
+        </div>
     </body>
 </html>

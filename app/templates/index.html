@@ -25,22 +25,22 @@
     </head>
 
     <body>
-        <div class="btn-group" style="width:100%">
-            <form action="#" method="POST">
-                <button style="width:33.3%" type="submit">LIFX App</button>
-                <label for="lifx_id">Please enter your LIFX key below. <i><a href="#">HELP</a></i></label><br>
-                <input type="text" id="lifx_id" name="lifx_id" style="width:33.3%">
-                <button style="width:33.3%" type="submit" formaction="#">Power ON</button>
-                <button style="width:33.3%" type="submit" formaction="#">Power OFF</button>
-                <button style="width:33.3%" type="submit" formaction="#">PULSE</button>
-                <button style="width:33.3%" type="submit" formaction="#">Mexicana</button>
-                <button style="width:33.3%" type="submit" formaction="#">Mango</button>
-                <button style="width:33.3%" type="submit" formaction="#">Pisces</button>
-                <button style="width:33.3%" type="submit" formaction="#">Hygge</button>
-                <button style="width:33.3%" type="submit" formaction="#">Blue Haus</button>
-                <button style="width:33.3%" type="submit" formaction="#">Lady Prep</button>
-                <button style="width:33.3%" type="submit" formaction="#">Vday Vibes</button>
-                <button style="width:33.3%" type="submit" formaction="#">Habesha Nation</button>
+        <div class="btn-group" style="height:100%">
+            <form action={{url_for('index')}} method="POST">
+                <button type="submit">LIFX App</button>
+                <label for="lifx_id">Enter your LIFX key.. <i><a href="https://api.developer.lifx.com/docs/authentication" target="_blank">HELP</a></i></label><br>
+                <input type="text" id="lifx_id" name="lifx_id" style="width:33.3%" value={{lifx_id}}>
+                <button type="submit" formaction={{url_for('on')}}>Power ON</button>
+                <button type="submit" formaction={{url_for('off')}}>Power OFF</button>
+                <button type="submit" formaction={{url_for('pulse')}}>PULSE</button>
+                <button type="submit" formaction={{url_for('mex')}}>Mexicana</button>
+                <button type="submit" formaction={{url_for('mang')}}>Mango</button>
+                <button type="submit" formaction={{url_for('pis')}}>Pisces</button>
+                <button type="submit" formaction={{url_for('hyg')}}>Hygge</button>
+                <button type="submit" formaction={{url_for('blu')}}>Blue Haus</button>
+                <button type="submit" formaction={{url_for('lad')}}>Lady Prep</button>
+                <button type="submit" formaction={{url_for('vda')}}>Vday Vibes</button>
+                <button type="submit" formaction={{url_for('hab')}}>Habesha Nation</button>
             </form>
         </div>
     </body>
